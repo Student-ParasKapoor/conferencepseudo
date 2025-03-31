@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Building } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Building, User } from 'lucide-react';
 
 const Contact = () => {
   const contactInfo = [
@@ -64,6 +64,42 @@ const Contact = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Get in touch with us for any queries about the conference
           </p>
+        </div>
+
+        {/* Conference Convener Section */}
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-12 animate-slideInLeft">
+          <div className="flex items-center mb-6">
+            <User className="h-8 w-8 text-blue-600 mr-3" />
+            <h3 className="text-xl font-semibold">Conference Convener</h3>
+          </div>
+          <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
+              <img
+                src="/public/images/comittee/Rekha.jpg"
+                alt="Dr. Rekha Nair"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h4 className="text-xl font-semibold text-gray-900">Dr. Rekha Nair</h4>
+              <p className="text-blue-600 mb-2">Professor & Dean, Poornima College of Engineering</p>
+              <p className="text-gray-600 mb-2">Convener, ICRAE 2025</p>
+              <div className="space-y-2">
+                <p className="text-gray-600 flex items-center justify-center md:justify-start">
+                  <Mail className="h-5 w-5 mr-2 text-blue-600" />
+                  <a href="mailto:rekhanairr@poornima.org" className="hover:text-blue-600">
+                    rekhanairr@poornima.org
+                  </a>
+                </p>
+                <p className="text-gray-600 flex items-center justify-center md:justify-start">
+                  <Phone className="h-5 w-5 mr-2 text-blue-600" />
+                  <a href="tel:+919928015794" className="hover:text-blue-600">
+                    +91-9928015794
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -168,7 +204,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-12 animate-fadeIn">
+        <div className="mt-12">
           <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg hover-scale">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.227507533296!2d75.84843731504726!3d26.7850792831973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc917387c392f%3A0x4c2c5414b2a35f44!2sPoornima%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1645524557447!5m2!1sen!2sin"

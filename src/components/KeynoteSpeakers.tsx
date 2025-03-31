@@ -4,13 +4,6 @@ import { Star, Award, Globe, Linkedin } from 'lucide-react';
 const KeynoteSpeakers = () => {
   const speakers = [
     {
-      name: "Dr. Shashi Bhushan",
-      title: "Professor, Computer & Information Science Department",
-      institution: "Universiti Teknologi Petronas, Malaysia",
-      image: "public/images/Shashi.jpg",
-      linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
-    },
-    {
       name: "Professor Ir. Dr. U. Johnson Alengaram",
       title: "Professor & Director",
       institution: "University of Malaya, Kuala Lumpur, Malaysia",
@@ -18,19 +11,26 @@ const KeynoteSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/prof-ir-u-johnson-alengaram-b-e-me-phd-ciem-ceng-mice-uk-666a6b54/"
     },
     {
-      name: "Raj Kapoor",
+      name: "Mr. Raj Kapoor",
       title: "Founder, Chairman",
       institution: "India Blockchain Alliance, The Global Alliance for Artificial Intelligence and Innovation",
       image: "public/images/raj.jpg",
       linkedin: "https://www.linkedin.com/in/indieblock/"
     },
     {
-      name: "Dr. Randip Kumar Das",
-      title: "Chief Technology Officer",
-      institution: "IBM Research, UK",
-      expertise: "Cybersecurity and Blockchain",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400",
-      linkedin: "https://www.linkedin.com/in/jameswilson"
+      name: "Dr. Shashi Bhushan",
+      title: "Professor, Computer & Information Science Department",
+      institution: "Universiti Teknologi Petronas, Malaysia",
+      image: "public/images/Shashi.jpg",
+      linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
+    },
+    {
+      name: "Prof. Duc Truong Pham",
+      title: "Professor,Department of Mechanical Engineering, School of Engineering, College of Engineering and Physical Sciences,",
+      institution: "The University of Birmingham, Birmingham, United Kingdom",
+      // expertise: "Deep Learning and Neural Networks",
+      image: "public/images/DT.jpg",
+      linkedin: "https://www.linkedin.com/in/duc-pham-17613347/?originalSubdomain=uk"
     },
     {
       name: "Dr. Naveen B.P.",
@@ -40,28 +40,28 @@ const KeynoteSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
     },
     {
-      name: "Dr. Michael Rodriguez",
-      title: "Senior Research Scientist",
-      institution: "Google AI, USA",
-      expertise: "Deep Learning and Neural Networks",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400",
-      linkedin: "https://www.linkedin.com/in/michaelrodriguez"
+      name: "Dr. Randip Kumar Das",
+      title: "Professor, Department of Mechanical Engineering",
+      institution: "Indian Institute of Technology (ISM) Dhanbad",
+      // expertise: "Cybersecurity and Blockchain",
+      image: "public/images/Randip.jpg",
+      // linkedin: "https://www.linkedin.com/in/jameswilson"
     },
     {
-      name: "Dr. Priya Sharma",
-      title: "Associate Professor",
-      institution: "IIT Delhi, India",
-      expertise: "Sustainable Engineering",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400&h=400",
-      linkedin: "https://www.linkedin.com/in/priyasharma"
+      name: "Prof. Meghanshu Vashista",
+      title: "Professor, Department of Mechanical Engineering",
+      institution: "Indian Institute of Technology (Banaras Hindu University), Varanasi",
+      // expertise: "Sustainable Engineering",
+      image: "public/images/Meghanshu.jpeg",
+      linkedin: "https://www.linkedin.com/in/meghanshu-vashista-1a544665/"
     },
     {
-      name: "Dr. David Kim",
-      title: "Research Director",
-      institution: "Microsoft Research, USA",
+      name: "Prof. Amit Rai Dixit",
+      title: "Professor, Department of Mechanical Engineering",
+      institution: "Indian Institute of Technology (ISM) Dhanbad",
       expertise: "Cloud Computing and Distributed Systems",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400&h=400",
-      linkedin: "https://www.linkedin.com/in/davidkim"
+      image: "public/images/Amit.jpg",
+      linkedin: "https://www.linkedin.com/in/amit-rai-dixit-a6b408249/"
     }
   ];
 
