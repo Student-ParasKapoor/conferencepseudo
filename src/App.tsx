@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle, Target } from 'lucide-react'; // Added Target import
-import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import CallForPapers from './components/CallForPapers';
 import ProgramRegistration from './components/ProgramRegistration';
 import PublishingPartners from './components/PublishingPartners';
@@ -203,7 +203,7 @@ const AboutPCE: React.FC = () => {
             <div className="absolute inset-0 bg-blue-600 rounded-lg transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl transform group-hover:scale-[1.02] transition-transform duration-300">
               <img
-                src="/images/Poornimaimage.png"
+                src="/public/images/pce_image.jpg"
                 alt="Poornima College of Engineering Campus"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
@@ -420,6 +420,7 @@ const Navbar: React.FC = () => {
   const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -447,20 +448,27 @@ const Navbar: React.FC = () => {
     { name: 'Gallery', path: '/gallery' },
     {
       name: 'Committee',
-      path: '/organization',
+      path: '/organization/patrons',
       subItems: [
-        { name: 'Patrons', path: '/organization/patrons' },
-        { name: 'General Chair & Convenor', path: '/organization/general-chair' },
+        { name: 'Patron', path: '/organization/patrons' },
+        { name: 'General Chair', path: '/organization/general-chair' },
+        { name: 'Convenor', path: '/organization/convenor' },
         { name: 'Advisory Committee', path: '/organization/advisory' },
-        { name: 'Organizing Secretary', path: '/organization/organizing-secretary' }, // Already present, no change needed
-        { name: 'Technical Committee', path: '/organization/technical' },
+        { name: 'Organizing Secretary', path: '/organization/organizing-secretary' },
         { name: 'Organizing Committee', path: '/organization/organizing' },
+        { name: 'Technical Committee', path: '/organization/technical' },
         { name: 'Publication and Media Committee', path: '/organization/publication-media' },
       ],
     },
     { name: 'History', path: '/history' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const isCommitteeActive = location.pathname.startsWith('/organization');
 
   return (
     <header className={`fixed w-full z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
@@ -495,7 +503,17 @@ const Navbar: React.FC = () => {
                 >
                   <Link
                     to={item.path}
-                    className="px-4 py-2 text-sm font-medium hover:bg-[#2b3d7b] rounded-md transition duration-300"
+                    onClick={() => {
+                      scrollToTop();
+                      if (item.subItems) {
+                        setIsCommitteeDropdownOpen(true);
+                      }
+                    }}
+                    className={`px-4 py-2 text-sm font-medium rounded-md transition duration-300 ${
+                      (item.subItems && isCommitteeActive) || location.pathname === item.path
+                        ? 'bg-[#2b3d7b]'
+                        : 'hover:bg-[#2b3d7b]'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -505,7 +523,15 @@ const Navbar: React.FC = () => {
                         <Link
                           key={subItem.name}
                           to={subItem.path}
-                          className="block px-4 py-2 text-sm hover:bg-[#1a2a5e] hover:text-white transition duration-200"
+                          onClick={() => {
+                            scrollToTop();
+                            setIsCommitteeDropdownOpen(false);
+                          }}
+                          className={`block px-4 py-2 text-sm transition duration-200 ${
+                            location.pathname === subItem.path
+                              ? 'bg-[#1a2a5e] text-white'
+                              : 'hover:bg-[#1a2a5e] hover:text-white'
+                          }`}
                         >
                           {subItem.name}
                         </Link>
@@ -627,6 +653,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="mt-6 text-center text-sm border-t border-gray-700 pt-4">
         <p>© 2025 INTERNATIONAL CONFERENCE ON RECENT ADVANCES IN ENGINEERING (ICRAE 2025). All Rights Reserved.</p>
+        <p className="mt-2 text-gray-400">Website Developed by <a href="https://www.linkedin.com/in/paras-kapoor-0a990315b/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-400 hover:underline transition-colors duration-200">Paras Kapoor</a> & <a href="https://www.linkedin.com/in/priyansh-manglani-70222424b/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-400 hover:underline transition-colors duration-200">Priyansh Manglani</a></p>
       </div>
     </footer>
   );
@@ -634,6 +661,10 @@ const Footer: React.FC = () => {
 
 // App Component
 const App: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col relative">

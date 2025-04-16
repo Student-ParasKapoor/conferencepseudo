@@ -7,8 +7,8 @@ const PublishingPartners = () => {
     description: "Leading publisher in scientific, technical, and medical research",
     logo: "public/images/stm logo.png",
     journals: [
-      "Journal of Advanced Research",
-      "Scientific Reports"
+      "Journal of Polymer and Composites"
+      // "Scientific Reports"
     ]
   };
 

@@ -4,32 +4,32 @@ import { Image as ImageIcon } from 'lucide-react';
 const Gallery = () => {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Conference Hall.jpg",
       title: "Conference Hall",
       description: "Main conference venue during inaugural session"
     },
     {
-      url: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Technical session.jpg",
       title: "Technical Session",
       description: "Researchers presenting their work"
     },
     {
-      url: "https://images.unsplash.com/photo-1544531585-9847b68c8c86?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Workshop Session.jpg",
       title: "Workshop Session",
       description: "Interactive workshop on emerging technologies"
     },
     {
-      url: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Panel Discussion.jpg",
       title: "Panel Discussion",
       description: "Expert panel discussing future trends"
     },
     {
-      url: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Award Ceremony.jpg",
       title: "Award Ceremony",
       description: "Recognition of outstanding research papers"
     },
     {
-      url: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1000",
+      url: "public/images/Networking Session.jpg",
       title: "Networking Session",
       description: "Participants engaging in discussions"
     }

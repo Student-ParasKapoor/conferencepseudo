@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreditCard, Calendar, FileText, Mail, Building } from 'lucide-react';
+import { CreditCard, Calendar, FileText, Mail, Building, ArrowRight } from 'lucide-react';
 
 const ProgramRegistration = () => {
   const registrationFees = [
@@ -55,9 +55,17 @@ const ProgramRegistration = () => {
           <h2 className="text-3xl font-extrabold text-blue-900 mb-4 transform hover:scale-105 transition-transform duration-300">
             Conference Registration and Publication Fee Details
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             Registration and publication fees for ICRAE 2025
           </p>
+          <a
+            href="#registration-form"
+            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 hover-scale hover-glow animate-fadeIn"
+            style={{ animationDelay: '200ms' }}
+          >
+            Register Now
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </a>
         </div>
 
         {/* Important Notice */}
