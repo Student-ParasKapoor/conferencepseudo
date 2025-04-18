@@ -182,19 +182,29 @@ const AdvisoryCommittee: React.FC = () => {
       photo: "/public/images/Advisory Comittee/Shashi.jpg"
     },
     {
-      name: "Prof. Randip Kumar Das",
-      designation: "IIT(ISM) Dhanbad",
-      photo: "/public/images/Advisory Comittee/Randip.jpg"
+      name: "Prof. Eswarahalli Dwarakadasa",
+      designation: "CEO and MD at Karnataka Hybrid Micro Devices Limited, Bengluru, Karnataka",
+      photo: "/public/images/Advisory Comittee/Eswarahalli.jpeg"
     },
     {
-      name: "Dr. Manoj Kumar",
-      designation: "CIS Department, Universiti Teknologi Petronas, Malaysia",
-      photo: "/public/images/Advisory Comittee/Manoj.png"
+      name: "Prof. G R SINHA",
+      designation: "Provost (Vice Chancellor), GSFC University Vadodara, Gujarat, India",
+      photo: "/public/images/Advisory Comittee/GR.jpeg"
+    },
+    {
+      name: "Professor Ir. Dr. U. Johnson Alengaram",
+      designation: "Professor & Director, University of Malaya, Kuala Lumpur, Malaysia",
+      photo: "/public/images/Advisory Comittee/Jhonson.jpg"
     },
     {
       name: "Dr. Shubhra Banerji",
       designation: "Academic Head, Testing Services Leader, Bengaluru, Karnataka, India",
       photo: "/public/images/Advisory Comittee/Shubhra.jpeg"
+    },
+    {
+      name: "Dr. Manoj Kumar",
+      designation: "CIS Department, Universiti Teknologi Petronas, Malaysia",
+      photo: "/public/images/Advisory Comittee/Manoj.png"
     },
     {
       name: "Dr. Jyoti Thanvi",
@@ -207,19 +217,35 @@ const AdvisoryCommittee: React.FC = () => {
       photo: "/public/images/Advisory Comittee/Surya.jpeg"
     },
     {
+      name: "Prof. Swarup K Mahapatra",
+      designation: "School of Mechanical Sciences, Indian Institute of Technology Bhubaneswar, Argul, Khordha, Odisha, India",
+      photo: "/public/images/Advisory Comittee/Swarup.jpeg"
+    },
+    
+    {
       name: "Dr. C. S. NAIR",
       designation: "Director, IIM-C, IIT-D, New delhi",
       photo: "/public/images/Advisory Comittee/CS Nair.jpeg"
     },
     {
-      name: "Prof. Eswarahalli Dwarakadasa",
-      designation: "CEO and MD at Karnataka Hybrid Micro Devices Limited, Bengluru, Karnataka",
-      photo: "/public/images/Advisory Comittee/Eswarahalli.jpeg"
-    },
-    {
       name: "Prof. D. Nagesh Kumar",
       designation: "Professor, Dept of Civil Engg, Indian Institute of Science, Begaluru, Karnatka",
       photo: "/public/images/Advisory Comittee/Nagesh.jpeg"
+    },
+    {
+      name: "Prof. V.S. Raja",
+      designation: "Emeritus Fellow, IIT Mumbai",
+      photo: "/public/images/Advisory Comittee/VS Raja.jpeg"
+    },
+    {
+      name: "Prof. S. C. KAUSHIK",
+      designation: "FORMER EMERITUS PROFESSOR, CES/DESE, IIT, DELHI",
+      photo: "/public/images/Advisory Comittee/SC.jpeg"
+    },
+    {
+      name: "Prof. Randip Kumar Das",
+      designation: "IIT(ISM) Dhanbad",
+      photo: "/public/images/Advisory Comittee/Randip.jpg"
     },
     {
       name: "Dr. Tarumay Ghoshal",
@@ -236,21 +262,7 @@ const AdvisoryCommittee: React.FC = () => {
       designation: "Director EQDC(S), Professor at NSUT Delhi",
       photo: "/public/images/Advisory Comittee/Rajveer.jpeg"
     },
-    {
-      name: "Prof. V.S. Raja",
-      designation: "Emeritus Fellow, IIT Mumbai",
-      photo: "/public/images/Advisory Comittee/VS Raja.jpeg"
-    },
-    {
-      name: "Prof. S. C. KAUSHIK",
-      designation: "FORMER EMERITUS PROFESSOR, CES/DESE, IIT, DELHI",
-      photo: "/public/images/Advisory Comittee/SC.jpeg"
-    },
-    {
-      name: "Prof. Swarup K Mahapatra",
-      designation: "School of Mechanical Sciences, Indian Institute of Technology Bhubaneswar, Argul, Khordha, Odisha, India",
-      photo: "/public/images/Advisory Comittee/Swarup.jpeg"
-    },
+    
     {
       name: "Prof. Amit Rai Dixit",
       designation: "Department of Mechanical Engineering, IIT",
@@ -261,11 +273,7 @@ const AdvisoryCommittee: React.FC = () => {
       designation: "Professor, Mahendragarh, Haryana, India",
       photo: "/public/images/Advisory Comittee/Akash.jpeg"
     },
-    {
-      name: "Prof. G R SINHA",
-      designation: "Provost (Vice Chancellor), GSFC University Vadodara, Gujarat, India",
-      photo: "/public/images/Advisory Comittee/GR.jpeg"
-    },
+    
     {
       name: "Dr. Santosh Rane",
       designation: "Chairman IIIE Mumbai Chapter, Vice Chairman SAEINDIA WS, Sardar Patel College of Engineering, Mumbai",
@@ -334,7 +342,7 @@ const AdvisoryCommittee: React.FC = () => {
     {
       name: "Mr. Sankara Reddy Thamma",
       designation: "AI/ML Data Engg | Gen-AI | Cloud Migration - Strategy & Analytics @ Deloitte",
-      photo: "/public/images/Advisory Comittee/Sankara.jpeg"
+      // photo: "/public/images/Advisory Comittee/Sankara.jpeg"
     },
     {
       name: "Mr. Abrar Ahmed Syed",

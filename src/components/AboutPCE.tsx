@@ -2,64 +2,69 @@ import React from 'react';
 
 const AboutPCE: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-b from-gray-50 to-gray-100 py-20 overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/white-diamond.png')] opacity-10 z-0" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        {/* Section Header with Animation */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 text-center mb-12 animate-fade-in-down">
-          About Poornima College of Engineering
+    <div className="bg-gradient-to-b from-white to-blue-50 py-16 relative overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 className="text-3xl font-extrabold text-blue-900 text-center mb-12 transform hover:scale-105 transition-transform duration-300">
+          ABOUT POORNIMA COLLEGE OF ENGINEERING
         </h2>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Content with Fade-In Effect */}
-          <div className="prose prose-lg text-gray-700 text-justify space-y-6 animate-fade-in-up">
-            <p className="leading-relaxed">
-              Established in <span className="font-semibold text-blue-800">2000</span>, Poornima College of Engineering (PCE) stands as a beacon of excellence in technical education in Rajasthan, India. With its <span className="text-green-600 font-semibold">NAAC A+ Accreditation</span> and a prestigious rank of second among all technical colleges affiliated with Rajasthan Technical University, Kota, PCE is committed to transforming students into skilled engineers and ethical leaders.
-            </p>
-            <p className="leading-relaxed">
-              What distinguishes PCE is its unwavering dedication to delivering industry-aligned education, fostering a vibrant research culture, and promoting values of innovation and service. With over <span className="font-semibold text-blue-800">2000 students</span> across 9 engineering specializations, cutting-edge infrastructure, and a sprawling <span className="font-semibold text-blue-800">3.5 Lac sq. ft. campus</span>, PCE continues its journey with the motto: <span className="italic text-indigo-600">"Success is not a destination, it's a journey."</span>
-            </p>
-          </div>
-
-          {/* Image with Hover Effect and Graphics */}
-          <div className="relative group animate-fade-in-right">
-            <div className="relative h-[450px] rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-105">
-              <img
-                src="/images/Poornimaimage.png"
-                alt="Poornima College of Engineering Campus"
-                loading="lazy"
-                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
-              />
-              {/* Overlay Graphic */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="space-y-6 transform hover:scale-[1.02] transition-all duration-300">
+            <div className="prose prose-lg text-gray-600 text-justify">
+              <p className="mb-6 leading-relaxed">
+                Poornima College of Engineering (PCE) has been practicing superior education standards since its inception
+                in 2000. The College has maintained its eminence as a leading Engineering college in Rajasthan, India. It
+                is NAAC A+ Accredited and ranked second among all the technical colleges affiliated with Rajasthan
+                Technical University, Kota, India.
+              </p>
+              <p className="mb-6 leading-relaxed">
+                PCE is moving ahead successfully to attain its vision mission to transforma students into high-quality
+                engineers and managers who may also enrich society by adhering to ethical culture, human values, and a
+                sense of service to society and the nation. PCE came into existence to promote quality in professional &
+                technical education in Jaipur, Rajasthan, and has a very strong research orientation and culture.
+              </p>
+              <p className="leading-relaxed">
+                What sets apart Poornima College of Engineering from other colleges in Jaipur, is its commitment to
+                high-quality and industry-recognized delivery of education, ensuring the cultural and social enrichment of
+                its students. Poornima brand symbolizes excellence through innovations, reliability, transparency, and
+                professionalism of the highest order and instills faith and confidence among all members concerned in India
+                and abroad.
+              </p>
             </div>
-
-            {/* Floating Graphic Elements */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-600 rounded-full opacity-75 animate-pulse" />
-            <div className="absolute bottom-4 right-4 w-12 h-12 bg-green-500 rounded-full opacity-75 animate-bounce delay-200" />
-
-            {/* Caption */}
-            <p className="mt-4 text-center text-gray-600 text-sm italic group-hover:text-blue-900 transition-colors duration-300">
-              A Glimpse of PCE’s Vibrant Campus
-            </p>
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="bg-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">2000+</h3>
+                <p className="text-sm text-gray-600">Students</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">9</h3>
+                <p className="text-sm text-gray-600">Specializations</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">NAAC A+</h3>
+                <p className="text-sm text-gray-600">Accreditation</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">2000</h3>
+                <p className="text-sm text-gray-600">Established</p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Stats Section with Animated Cards */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-fade-in">
-            <div className="text-4xl font-bold text-blue-900">2000+</div>
-            <p className="text-gray-600 mt-2">Students Enrolled</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-fade-in delay-100">
-            <div className="text-4xl font-bold text-blue-900">9</div>
-            <p className="text-gray-600 mt-2">Engineering Specializations</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-fade-in delay-200">
-            <div className="text-4xl font-bold text-blue-900">3.5L</div>
-            <p className="text-gray-600 mt-2">Square Feet Campus</p>
+          <div className="relative group">
+            <div className="absolute inset-0 bg-blue-600 rounded-lg transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl transform group-hover:scale-[1.02] transition-transform duration-300">
+              <img
+                src="/images/pce_image.jpg"
+                alt="Poornima College of Engineering Campus"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                onError={() => console.error('Failed to load PCE image')}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
           </div>
         </div>
       </div>

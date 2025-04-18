@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock, Building, User } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +9,68 @@ const Contact: React.FC = () => {
     subject: '',
     message: '',
   });
+  const [status, setStatus] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [mapApiKey, setMapApiKey] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    // Check EmailJS environment variables
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+    if (!userId || !serviceId || !templateId) {
+      setError('EmailJS configuration is missing. Please check your .env file.');
+    }
+
+    // Check Google Maps API key
+    const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    if (!googleMapsApiKey) {
+      setError('Google Maps API key is missing. Please check your .env file.');
+    } else {
+      setMapApiKey(googleMapsApiKey);
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsLoading(true);
+    setStatus('Sending...');
+
+    try {
+      const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+      if (!userId || !serviceId || !templateId) {
+        throw new Error('Missing EmailJS configuration');
+      }
+
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        userId
+      );
+
+      if (result.status === 200) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setStatus('Failed to send message. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -26,62 +84,55 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
-      details: [
-        "+91 141 2345678",
-        "+91 141 2345679"
-      ]
+      title: 'Phone',
+      details: ['+91 9928015794', '+91 9887371157'],
     },
     {
       icon: Mail,
-      title: "Email",
-      details: [
-        "icrae2025@poornima.org",
-        "conference@poornima.org"
-      ]
-    },
-    {
-      icon: Clock,
-      title: "Working Hours",
-      details: [
-        "Monday - Friday: 9:00 AM - 5:00 PM",
-        "Saturday: 9:00 AM - 1:00 PM"
-      ]
+      title: 'Email',
+      details: ['icrae04@poornima.org'],
     },
     {
       icon: Building,
-      title: "Address",
+      title: 'Venue',
       details: [
-        "Poornima College of Engineering",
-        "Plot No. IS-2027-2031, Ramchandrapura",
-        "P.O. Vidhani Vatika, Sitapura Extension",
-        "Jaipur - 302022, Rajasthan, India"
-      ]
-    }
+        'Poornima College of Engineering',
+        'Plot No. IS-2027-2031, Ramchandrapura',
+        'P.O. Vidhani Vatika, Sitapura Extension',
+        'Jaipur - 302022, Rajasthan, India',
+      ],
+    },
   ];
 
   const faqs = [
     {
-      question: "How can I submit my paper?",
-      answer: "Papers can be submitted through the conference submission portal. Please ensure you follow the submission guidelines and paper template."
+      question: 'How can I submit my paper?',
+      answer:
+        'Papers can be submitted through the conference submission portal. Please ensure you follow the submission guidelines and paper template.',
     },
     {
-      question: "What are the important dates?",
-      answer: "Paper submission deadline is October 15, 2025. Acceptance notification will be sent by November 1, 2025. Final registration deadline is November 15, 2025."
+      question: 'What are the important dates?',
+      answer:
+        'Paper submission deadline is October 15, 2025. Acceptance notification will be sent by August 15, 2025. Final registration deadline is August 30, 2025.',
     },
     {
-      question: "Is virtual presentation allowed?",
-      answer: "Yes, the conference will be conducted in hybrid mode. Authors can choose to present their papers either physically or virtually."
-    }
+      question: 'Is virtual presentation allowed?',
+      answer:
+        'Yes, the conference will be conducted in hybrid mode. Authors can choose to present their papers either physically or virtually.',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <span className="block sm:inline">{error}</span>
+          </div>
+        )}
+        
         <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl font-extrabold text-blue-900 mb-4">
-            Contact Us
-          </h2>
+          <h2 className="text-3xl font-extrabold text-blue-900 mb-4">Contact Us</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Get in touch with us for any queries about the conference
           </p>
@@ -98,9 +149,14 @@ const Contact: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
                 <img
-                  src="/public/images/comittee/Rekha.jpg"
+                  src="/images/comittee/Rekha.jpg"
                   alt="Dr. Rekha Nair"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder.jpg';
+                    console.error('Failed to load image:', target.src);
+                  }}
                 />
               </div>
               <div className="text-center md:text-left">
@@ -134,9 +190,14 @@ const Contact: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
                 <img
-                  src="/public/images/comittee/Ratnesh.jpeg"
+                  src="/images/comittee/Ratnesh.jpeg"
                   alt="Dr. Co-Convener"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder.jpg';
+                    console.error('Failed to load image:', target.src);
+                  }}
                 />
               </div>
               <div className="text-center md:text-left">
@@ -167,8 +228,8 @@ const Contact: React.FC = () => {
             <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
-                <div 
-                  key={item.title} 
+                <div
+                  key={item.title}
                   className="flex items-start hover-lift animate-fadeIn"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -178,8 +239,8 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900">{item.title}</h4>
                     {item.details.map((detail, detailIndex) => (
-                      <p 
-                        key={detailIndex} 
+                      <p
+                        key={detailIndex}
                         className="text-gray-600 animate-fadeIn"
                         style={{ animationDelay: `${index * 100 + detailIndex * 50}ms` }}
                       >
@@ -205,8 +266,9 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover-lift"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover:border-blue-400 transition-colors"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div className="animate-fadeIn" style={{ animationDelay: '200ms' }}>
@@ -219,8 +281,9 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover-lift"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover:border-blue-400 transition-colors"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div className="animate-fadeIn" style={{ animationDelay: '300ms' }}>
@@ -233,8 +296,9 @@ const Contact: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover-lift"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover:border-blue-400 transition-colors"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <div className="animate-fadeIn" style={{ animationDelay: '400ms' }}>
@@ -247,17 +311,31 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover-lift"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 hover:border-blue-400 transition-colors"
                   required
+                  disabled={isLoading}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-all duration-300 hover-scale hover-glow animate-fadeIn"
-                style={{ animationDelay: '500ms' }}
+                className={`w-full py-2 px-4 rounded-md transition-all duration-300 ${
+                  isLoading
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                }`}
+                disabled={isLoading}
               >
-                Send Message
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
+              {status && (
+                <p
+                  className={`mt-4 text-center ${
+                    status.includes('successfully') ? 'text-green-600' : 'text-red-600'
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
@@ -266,8 +344,8 @@ const Contact: React.FC = () => {
           <h3 className="text-xl font-semibold mb-6">Frequently Asked Questions</h3>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="border-b border-gray-200 pb-6 last:border-0 hover-scale animate-fadeIn"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
@@ -282,16 +360,22 @@ const Contact: React.FC = () => {
 
         <div className="mt-12">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.201201202344!2d75.8055!3d26.8475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5b5c0b5b5c0%3A0x5b5c0b5c0b5c0b5c!2sPoornima%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Poornima College of Engineering Location"
-            />
+            {mapApiKey ? (
+              <iframe
+                src={`https://www.google.com/maps/embed/v1/place?key=${mapApiKey}&q=Poornima+College+of+Engineering,Jaipur+Rajasthan+India&zoom=15`}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Poornima College of Engineering Location"
+              />
+            ) : (
+              <div className="h-[450px] flex items-center justify-center bg-gray-100">
+                <p className="text-red-600">Google Maps API key is missing. Please check your configuration.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

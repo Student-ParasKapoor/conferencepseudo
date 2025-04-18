@@ -1,7 +1,33 @@
-import React from 'react';
-import { CreditCard, Calendar, FileText, Mail, Building, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { CreditCard, Calendar, FileText, Mail, Building, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ProgramRegistration = () => {
+  const [copied, setCopied] = useState(false);
+  const email = 'icrae04@poornima.org';
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      // Try to open default email client
+      window.location.href = `mailto:${email}?subject=ICRAE 2025 Query`;
+    } catch (error) {
+      console.error('Failed to open email client:', error);
+      // Fallback to copying email to clipboard
+      navigator.clipboard.writeText(email).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    }
+  };
+
+  const handleCopyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   const registrationFees = [
     {
       category: "Category A",
@@ -94,10 +120,10 @@ const ProgramRegistration = () => {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
                     <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider" colSpan={2}>
-                      Early Registration<br/>(Before 30 August, 2024)
+                      Early Registration<br/>(Before 30 August, 2025)
                     </th>
                     <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider" colSpan={2}>
-                      Late Registration<br/>(After 30 August, 2024)
+                      Late Registration<br/>(After 30 August, 2025)
                     </th>
                   </tr>
                   <tr>
@@ -158,11 +184,33 @@ const ProgramRegistration = () => {
             Registration Process
           </h3>
           <p className="text-gray-600 mb-4">
-            After the Payment, Download the Registration form, fill it and send it to respective track wise mail ids mentioned below depending upon the paper under which it is submitted.
+            After the Payment, Download the Registration form, fill it and send it to mail id mentioned below.
           </p>
           <div className="flex items-center text-blue-600 hover-lift">
             <Mail className="h-5 w-5 mr-2" />
-            <p>For any further query, write to: <a href="mailto:technovation2023@poornima.org" className="underline hover:text-blue-800 transition-colors duration-200">technovation2023@poornima.org</a></p>
+            <p>
+              For any further query, write to:{' '}
+              <div className="flex items-center space-x-2">
+                <a
+                  href={`mailto:${email}`}
+                  onClick={handleEmailClick}
+                  className="underline hover:text-blue-800 transition-colors duration-200"
+                >
+                  {email}
+                </a>
+                <button
+                  onClick={handleCopyClick}
+                  className="p-1 rounded-full hover:bg-gray-100 transition-colors duration-200"
+                  title="Copy email address"
+                >
+                  {copied ? (
+                    <Check className="h-4 w-4 text-green-500" />
+                  ) : (
+                    <Copy className="h-4 w-4" />
+                  )}
+                </button>
+              </div>
+            </p>
           </div>
         </div>
 
