@@ -5,7 +5,7 @@ const PublishingPartners = () => {
   const publisher = {
     name: "STM",
     description: "Leading publisher in scientific, technical, and medical research",
-    logo: "public/images/stm logo.png",
+    logo: "/images/stm logo.png",
     journals: [
       "Journal of Polymer and Composites"
       // "Scientific Reports"

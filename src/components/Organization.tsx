@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Users, Award, Building } from 'lucide-react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
@@ -9,19 +9,19 @@ const Patrons: React.FC = () => {
       name: "Sh Shashikant Singhi",
       position: "Chief Patron",
       title: "Chairperson, Poornima Group, Jaipur, India",
-      photo: "/public/images/comittee/Shashikant.jpg",
+      photo: "/images/comittee/Shashikant.jpg",
     },
     {
       name: "Dr. Mahesh Bundele",
       position: "Patron",
       title: "Principal and Director, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Mahesh-Bundele.jpg",
+      photo: "/images/comittee/Mahesh-Bundele.jpg",
     },
     {
       name: "Ar. Rahul Singhi",
       position: "Patron",
       title: "Director, Poornima Group, Jaipur, India",
-      photo: "/public/images/comittee/Rahul.jpeg",
+      photo: "/images/comittee/Rahul.jpeg",
     },
   ];
 
@@ -58,12 +58,12 @@ const GeneralChair: React.FC = () => {
     {
       name: "Dr. Pankaj Dhemla",
       title: "Vice Principal, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Pankaj.jpeg",
+      photo: "/images/comittee/Pankaj.jpeg",
     },
     {
       name: "Dr. Gautam Singh",
       title: "Registrar, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Gautam.jpeg",
+      photo: "/images/comittee/Gautam.jpeg",
     },
   ];
 
@@ -93,80 +93,6 @@ const GeneralChair: React.FC = () => {
   );
 };
 
-// General Chair & Convener Component (unchanged)
-const GeneralChairAndConvener: React.FC = () => {
-  const generalChairs = [
-    {
-      name: "Dr. Pankaj Dhemla",
-      title: "Vice Principal, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Pankaj.jpeg",
-    },
-    {
-      name: "Dr. Gautam Singh",
-      title: "Registrar, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Gautam.jpeg",
-    },
-  ];
-
-  const conveners = [
-    {
-      name: "Dr. Rekha Nair",
-      position: "Conference Chair & Convener",
-      title: "Professor & Dean, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Rekha.jpg",
-    },
-    {
-      name: "Dr. Ratnesh Sharma",
-      position: "Co-Convener",
-      title: "Associate Professor, Department of Mechanical Engineering, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Ratnesh.jpeg",
-    },
-  ];
-
-  return (
-    <div className="space-y-12">
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <div className="flex items-center mb-6">
-          <Building className="h-8 w-8 text-blue-600 mr-3" />
-          <h3 className="text-xl font-semibold">General Chair</h3>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {generalChairs.map((chair, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
-              <img
-                src={chair.photo}
-                alt={chair.name}
-                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h4 className="font-semibold text-gray-900">{chair.name}</h4>
-              <p className="text-gray-600">{chair.title}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="bg-white rounded-lg shadow-lg p-8">
-        <div className="flex items-center mb-6">
-          <Building className="h-8 w-8 text-blue-600 mr-3" />
-          <h3 className="text-xl font-semibold">Convener</h3>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {conveners.map((convener, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
-              <img
-                src={convener.photo}
-                alt={convener.name}
-                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-              />
-              <h4 className="font-semibold text-gray-900">{convener.name}</h4>
-              <p className="text-gray-600">{convener.position}</p>
-              <p className="text-gray-600">{convener.title}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 // Advisory Committee Component
 const AdvisoryCommittee: React.FC = () => {
@@ -174,175 +100,175 @@ const AdvisoryCommittee: React.FC = () => {
     {
       name: "Mr. Raj Kapoor",
       designation: "Founder - India Blockchain Alliance, Chairman - India AI Alliance, Chairman - Global Alliance for Ethical AI",
-      photo: "/public/images/Advisory Comittee/raj.jpg"
+      photo: "/images/Advisory Comittee/raj.jpg"
     },
     {
       name: "Dr. Shashi Bhushan",
       designation: "Computer & Information Science Department, Universiti Teknologi Petronas, Malaysia",
-      photo: "/public/images/Advisory Comittee/Shashi.jpg"
+      photo: "/images/Advisory Comittee/Shashi.jpg"
     },
     {
       name: "Prof. Eswarahalli Dwarakadasa",
       designation: "CEO and MD at Karnataka Hybrid Micro Devices Limited, Bengluru, Karnataka",
-      photo: "/public/images/Advisory Comittee/Eswarahalli.jpeg"
+      photo: "/images/Advisory Comittee/Eswarahalli.jpeg"
     },
     {
       name: "Prof. G R SINHA",
       designation: "Provost (Vice Chancellor), GSFC University Vadodara, Gujarat, India",
-      photo: "/public/images/Advisory Comittee/GR.jpeg"
+      photo: "/images/Advisory Comittee/GR.jpeg"
     },
     {
       name: "Professor Ir. Dr. U. Johnson Alengaram",
       designation: "Professor & Director, University of Malaya, Kuala Lumpur, Malaysia",
-      photo: "/public/images/Advisory Comittee/Jhonson.jpg"
+      photo: "/images/Advisory Comittee/Jhonson.jpg"
     },
     {
       name: "Dr. Shubhra Banerji",
       designation: "Academic Head, Testing Services Leader, Bengaluru, Karnataka, India",
-      photo: "/public/images/Advisory Comittee/Shubhra.jpeg"
+      photo: "/images/Advisory Comittee/Shubhra.jpeg"
     },
     {
       name: "Dr. Manoj Kumar",
       designation: "CIS Department, Universiti Teknologi Petronas, Malaysia",
-      photo: "/public/images/Advisory Comittee/Manoj.png"
+      photo: "/images/Advisory Comittee/Manoj.png"
     },
     {
       name: "Dr. Jyoti Thanvi",
       designation: "FHEA, Dubai, United Arab Emirates",
-      photo: "/public/images/Advisory Comittee/Jyoti.jpeg"
+      photo: "/images/Advisory Comittee/Jyoti.jpeg"
     },
     {
       name: "Dr. Surya Parkash Gupta",
       designation: "Professor, Division Head and Team Leader for CBRN, Cyber, GeoHydroMeteorological Disasters, EOC, Climate, Resilience, Public Health Emergency and Disaster Management and Project Director at NIDM, MHA, GoI",
-      photo: "/public/images/Advisory Comittee/Surya.jpeg"
+      photo: "/images/Advisory Comittee/Surya.jpeg"
     },
     {
       name: "Prof. Swarup K Mahapatra",
       designation: "School of Mechanical Sciences, Indian Institute of Technology Bhubaneswar, Argul, Khordha, Odisha, India",
-      photo: "/public/images/Advisory Comittee/Swarup.jpeg"
+      photo: "/images/Advisory Comittee/Swarup.jpeg"
     },
     
     {
       name: "Dr. C. S. NAIR",
       designation: "Director, IIM-C, IIT-D, New delhi",
-      photo: "/public/images/Advisory Comittee/CS Nair.jpeg"
+      photo: "/images/Advisory Comittee/CS Nair.jpeg"
     },
     {
       name: "Prof. D. Nagesh Kumar",
       designation: "Professor, Dept of Civil Engg, Indian Institute of Science, Begaluru, Karnatka",
-      photo: "/public/images/Advisory Comittee/Nagesh.jpeg"
+      photo: "/images/Advisory Comittee/Nagesh.jpeg"
     },
     {
       name: "Prof. V.S. Raja",
       designation: "Emeritus Fellow, IIT Mumbai",
-      photo: "/public/images/Advisory Comittee/VS Raja.jpeg"
+      photo: "/images/Advisory Comittee/VS Raja.jpeg"
     },
     {
       name: "Prof. S. C. KAUSHIK",
       designation: "FORMER EMERITUS PROFESSOR, CES/DESE, IIT, DELHI",
-      photo: "/public/images/Advisory Comittee/SC.jpeg"
+      photo: "/images/Advisory Comittee/SC.jpeg"
     },
     {
       name: "Prof. Randip Kumar Das",
       designation: "IIT(ISM) Dhanbad",
-      photo: "/public/images/Advisory Comittee/Randip.jpg"
+      photo: "/images/Advisory Comittee/Randip.jpg"
     },
     {
       name: "Dr. Tarumay Ghoshal",
       designation: "DIT University, Environment and Climate Scientist, Enthusiast in SDG",
-      photo: "/public/images/Advisory Comittee/Tarumay.jpeg"
+      photo: "/images/Advisory Comittee/Tarumay.jpeg"
     },
     {
       name: "Dr. Nandyala Darga Kumar",
       designation: "Civil Engineering, JNTUH University College of Engineering, Hyderabad, Telangana",
-      photo: "/public/images/Advisory Comittee/Nandyala.jpeg"
+      photo: "/images/Advisory Comittee/Nandyala.jpeg"
     },
     {
       name: "Prof. Rajveer Yaduvanshi",
       designation: "Director EQDC(S), Professor at NSUT Delhi",
-      photo: "/public/images/Advisory Comittee/Rajveer.jpeg"
+      photo: "/images/Advisory Comittee/Rajveer.jpeg"
     },
     
     {
       name: "Prof. Amit Rai Dixit",
       designation: "Department of Mechanical Engineering, IIT",
-      photo: "/public/images/Advisory Comittee/Amit.jpg"
+      photo: "/images/Advisory Comittee/Amit.jpg"
     },
     {
       name: "Dr. Akash Saxena",
       designation: "Professor, Mahendragarh, Haryana, India",
-      photo: "/public/images/Advisory Comittee/Akash.jpeg"
+      photo: "/images/Advisory Comittee/Akash.jpeg"
     },
     
     {
       name: "Dr. Santosh Rane",
       designation: "Chairman IIIE Mumbai Chapter, Vice Chairman SAEINDIA WS, Sardar Patel College of Engineering, Mumbai",
-      photo: "/public/images/Advisory Comittee/Santosh.jpeg"
+      photo: "/images/Advisory Comittee/Santosh.jpeg"
     },
     {
       name: "Dr. R. S. Dubey (Dr. Raghvendra S. Dubey)",
       designation: "Professor (CS&AI) & Associate Dean (R&D), Warangal, Telangana, India",
-      photo: "/public/images/Advisory Comittee/RS.jpeg"
+      photo: "/images/Advisory Comittee/RS.jpeg"
     },
     {
       name: "Prof. (Dr.) Swapnil Rai",
       designation: "Professor (EVS), Associate Dean-Research, Gwalior, Madhya Pradesh, India",
-      photo: "/public/images/Advisory Comittee/Swapnil.jpeg"
+      photo: "/images/Advisory Comittee/Swapnil.jpeg"
     },
     {
       name: "Dr. Vinoth Kumar Kalimuthu",
       designation: "Professor & Head / AI&ML, CEO- SSMIET Foundation for Incubation and President IIC, SSM INSTITUTE OF ENGINEERING AND TECHNOLOGY, Tiruchirappalli, Tamil Nadu, India",
-      photo: "/public/images/Advisory Comittee/Vinoth.jpeg"
+      photo: "/images/Advisory Comittee/Vinoth.jpeg"
     },
     {
       name: "Prof. Prashant Ambad",
       designation: "Director IQAC, Professor and Director SMMS, JSPM University Pune with expertise in Industrial Engineering, Pune",
-      photo: "/public/images/Advisory Comittee/Prashant.jpeg"
+      photo: "/images/Advisory Comittee/Prashant.jpeg"
     },
     {
       name: "Dr. Vikash Kumar Saini",
       designation: "Khalifa University, UAE, Abu Dhabi Emirate, United Arab Emirates",
-      photo: "/public/images/Advisory Comittee/Vikash.jpg"
+      photo: "/images/Advisory Comittee/Vikash.jpg"
     },
     {
       name: "Prof.(Dr.) Vedvyas Jayprakashnarayan Dwivedi",
       designation: "Executive Vice-President, Indus University Ahmedabad, Former Vice-Chancellor Gujrat",
-      photo: "/public/images/Advisory Comittee/Vedvyas.jpeg"
+      photo: "/images/Advisory Comittee/Vedvyas.jpeg"
     },
     {
       name: "Mr. Shailendra Kasera",
       designation: "Director at Incube | Net Zero| Green Building | GreenCo |GreenPro, Jaipur, Rajasthan, India",
-      photo: "/public/images/Advisory Comittee/Shailendra.jpeg"
+      photo: "/images/Advisory Comittee/Shailendra.jpeg"
     },
     {
       name: "Dr. Pankaj Sharma",
       designation: "RTU, Kota",
-      photo: "/public/images/Advisory Comittee/Pankaj.jpeg"
+      photo: "/images/Advisory Comittee/Pankaj.jpeg"
     },
     {
       name: "Dr. Damodar Reddy",
       designation: "Head, Institute of Aeronautical Engineering Hyderabad, Telangana",
-      photo: "/public/images/Advisory Comittee/Damodar.jpg"
+      photo: "/images/Advisory Comittee/Damodar.jpg"
     },
     {
       name: "Dr. Prashant R. Nair",
       designation: "Head & Vice-Chairman - Internal Quality Assurance Cell (IQAC) at Amrita Vishwa Vidyapeetham Coimbatore, Tamil Nadu",
-      photo: "/public/images/Advisory Comittee/Prashant.jpg"
+      photo: "/images/Advisory Comittee/Prashant.jpg"
     },
     {
       name: "Dr. Balachandra Pattanaik",
       designation: "Professor of Electrical and Computer Engineering, Wollega University",
-      photo: "/public/images/Advisory Comittee/Balachandra.jpeg"
+      photo: "/images/Advisory Comittee/Balachandra.jpeg"
     },
     {
       name: "Dr. Mendus Jacob",
       designation: "Director MCA, Marian College Kuttikkanam, CEO, ipsr solutions ltd.",
-      photo: "/public/images/Advisory Comittee/Mendus.jpeg"
+      photo: "/images/Advisory Comittee/Mendus.jpeg"
     },
     {
       name: "Mr. Sankara Reddy Thamma",
       designation: "AI/ML Data Engg | Gen-AI | Cloud Migration - Strategy & Analytics @ Deloitte",
-      // photo: "/public/images/Advisory Comittee/Sankara.jpeg"
+      // photo: "/images/Advisory Comittee/Sankara.jpeg"
     },
     {
       name: "Mr. Abrar Ahmed Syed",
@@ -633,14 +559,6 @@ const TechnicalCommittee: React.FC = () => {
     "Mr. Anand Geet, Department of Computer Engineering",
   ];
 
-  // const publicationCommittee = [
-  //   "Dr. Kuldeep Sharma, Department of Humanities & Applied Sciences",
-  //   "Dr. Shikha Agarwal, Department of Humanities & Applied Sciences",
-  //   "Dr. Sarveen Sachdeva, Department of Humanities & Applied Sciences",
-  //   "Dr. Shalini Shah, Department of Humanities & Applied Sciences",
-  //   "Ms. Tripti Verma, Department of Humanities & Applied Sciences",
-  // ];
-
   return (
     <div className="space-y-12">
       <div className="bg-white rounded-lg shadow-lg p-8">
@@ -676,14 +594,14 @@ const TechnicalCommittee: React.FC = () => {
 // Organizing Committee Component
 const OrganizingCommittee: React.FC = () => {
   const organizingCommittee = [
-    { name: "Dr. Shilpi Jain", photo: "/public/images/comittee/Shilpi.jpg" },
-    { name: "Dr. Manoj Sharma", photo: "/public/images/comittee/Manoj.jpg" },
-    { name: "Dr. Siddharth Choudhary", photo: "/public/images/comittee/Siddharth.jpg" },
-    { name: "Dr. Meena Tekriwal", photo: "/public/images/comittee/Meena.jpg" },
-    { name: "Mr. Brahmdutt Bohra", photo: "/public/images/comittee/Brahmdutt.jpg" },
-    { name: "Mr. Sumit Sharma", photo: "/public/images/comittee/Sumit.jpg" },
-    { name: "Ms. Richa Choudhary", photo: "/public/images/comittee/Richa.jpg" },
-    { name: "Mr. Javed Moazzam", photo: "/public/images/comittee/Javed.jpg" },
+    { name: "Dr. Shilpi Jain", photo: "/images/comittee/Shilpi.jpg" },
+    { name: "Dr. Manoj Sharma", photo: "/images/comittee/Manoj.jpg" },
+    { name: "Dr. Siddharth Choudhary", photo: "/images/comittee/Siddharth.jpg" },
+    { name: "Dr. Meena Tekriwal", photo: "/images/comittee/Meena.jpg" },
+    { name: "Mr. Brahmdutt Bohra", photo: "/images/comittee/Brahmdutt.jpg" },
+    { name: "Mr. Sumit Sharma", photo: "/images/comittee/Sumit.jpg" },
+    { name: "Ms. Richa Choudhary", photo: "/images/comittee/Richa.jpg" },
+    { name: "Mr. Javed Moazzam", photo: "/images/comittee/Javed.jpg" },
   ];
 
   return (
@@ -744,22 +662,22 @@ const OrganizingSecretary: React.FC = () => {
     {
       name: "Dr. Peeyush Vats",
       position: "Professor, Department of Mechanical Engineering",
-      photo: "/public/images/comittee/Peeyush.jpeg",
+      photo: "/images/comittee/Peeyush.jpeg",
     },
     {
       name: "Dr. Ankit Tyagi",
       position: "Associate Professor, Department of Mechanical Engineering",
-      photo: "/public/images/comittee/Ankit.jpeg",
+      photo: "/images/comittee/Ankit.jpeg",
     },
     {
       name: "Dr. Piyusha Somwanshi",
       position: "Professor, Department of Humanities & Applied Sciences",
-      photo: "/public/images/comittee/Piyusha.jpeg",
+      photo: "/images/comittee/Piyusha.jpeg",
     },
     {
       name: "Dr. Anurika Mehta",
       position: "Professor, Department of Humanities & Applied Sciences",
-      photo: "/public/images/comittee/Anurika.jpg",
+      photo: "/images/comittee/Anurika.jpg",
     },
   ];
 
@@ -796,13 +714,13 @@ const Convenor: React.FC = () => {
       name: "Dr. Rekha Nair",
       position: "Conference Chair & Convener",
       title: "Professor & Dean, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Rekha.jpg",
+      photo: "/images/comittee/Rekha.jpg",
     },
     {
       name: "Dr. Ratnesh Sharma",
       position: "Co-Convener",
       title: "Associate Professor, Department of Mechanical Engineering, Poornima College of Engineering, Jaipur, India",
-      photo: "/public/images/comittee/Ratnesh.jpeg",
+      photo: "/images/comittee/Ratnesh.jpeg",
     },
   ];
 
@@ -846,7 +764,7 @@ const Organization: React.FC = () => {
     { name: 'Organizing Secretary', path: '/organization/organizing-secretary' },
     { name: 'Organizing Committee', path: '/organization/organizing' },
     { name: 'Technical Committee', path: '/organization/technical' },
-    { name: 'Publication and Media Committee', path: '/organization/publication-media' },
+    { name: 'Publication and Media Committee', path: '/organization/publication-media' }
   ];
 
   return (

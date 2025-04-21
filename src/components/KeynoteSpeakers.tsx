@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Award, Globe, Linkedin } from 'lucide-react';
+import { Award, Globe, Linkedin } from 'lucide-react';
 
 const KeynoteSpeakers = () => {
   const speakers = [
@@ -7,21 +7,21 @@ const KeynoteSpeakers = () => {
       name: "Professor Ir. Dr. U. Johnson Alengaram",
       title: "Professor & Director",
       institution: "University of Malaya, Kuala Lumpur, Malaysia",
-      image: "public/images/Jhonson.jpg",
+      image: "/images/Jhonson.jpg",
       linkedin: "https://www.linkedin.com/in/prof-ir-u-johnson-alengaram-b-e-me-phd-ciem-ceng-mice-uk-666a6b54/"
     },
     {
       name: "Mr. Raj Kapoor",
       title: "Founder, Chairman",
       institution: "India Blockchain Alliance, The Global Alliance for Artificial Intelligence and Innovation",
-      image: "public/images/raj.jpg",
+      image: "/images/raj.jpg",
       linkedin: "https://www.linkedin.com/in/indieblock/"
     },
     {
       name: "Dr. Shashi Bhushan",
       title: "Professor, Computer & Information Science Department",
       institution: "Universiti Teknologi Petronas, Malaysia",
-      image: "public/images/Shashi.jpg",
+      image: "/images/Shashi.jpg",
       linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
     },
     {
@@ -29,14 +29,14 @@ const KeynoteSpeakers = () => {
       title: "Professor,Department of Mechanical Engineering, School of Engineering, College of Engineering and Physical Sciences,",
       institution: "The University of Birmingham, Birmingham, United Kingdom",
       // expertise: "Deep Learning and Neural Networks",
-      image: "public/images/DT.jpg",
+      image: "/images/DT.jpg",
       linkedin: "https://www.linkedin.com/in/duc-pham-17613347/?originalSubdomain=uk"
     },
     {
       name: "Dr. Naveen B.P.",
       title: "Professor, Department of Civil Engineering",
       institution: "NITTTR, Kolkata",
-      image: "public/images/naveen.jpg",
+      image: "/images/naveen.jpg",
       linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
     },
     {
@@ -44,7 +44,7 @@ const KeynoteSpeakers = () => {
       title: "Professor, Department of Mechanical Engineering",
       institution: "Indian Institute of Technology (ISM) Dhanbad",
       // expertise: "Cybersecurity and Blockchain",
-      image: "public/images/Randip.jpg",
+      image: "/images/Randip.jpg",
       // linkedin: "https://www.linkedin.com/in/jameswilson"
     },
     {
@@ -52,7 +52,7 @@ const KeynoteSpeakers = () => {
       title: "Professor, Department of Mechanical Engineering",
       institution: "Indian Institute of Technology (Banaras Hindu University), Varanasi",
       // expertise: "Sustainable Engineering",
-      image: "public/images/Meghanshu.jpeg",
+      image: "/images/Meghanshu.jpeg",
       linkedin: "https://www.linkedin.com/in/meghanshu-vashista-1a544665/"
     },
     {
@@ -60,7 +60,7 @@ const KeynoteSpeakers = () => {
       title: "Professor, Department of Mechanical Engineering",
       institution: "Indian Institute of Technology (ISM) Dhanbad",
       expertise: "Cloud Computing and Distributed Systems",
-      image: "public/images/Amit.jpg",
+      image: "/images/Amit.jpg",
       linkedin: "https://www.linkedin.com/in/amit-rai-dixit-a6b408249/"
     }
   ];

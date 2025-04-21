@@ -4,32 +4,32 @@ import { Image as ImageIcon } from 'lucide-react';
 const Gallery = () => {
   const images = [
     {
-      url: "public/images/Conference Hall.jpg",
+      url: "/images/Conference Hall.jpg",
       title: "Conference Hall",
       description: "Main conference venue during inaugural session"
     },
     {
-      url: "public/images/Technical session.jpg",
+      url: "/images/Technical session.jpg",
       title: "Technical Session",
       description: "Researchers presenting their work"
     },
     {
-      url: "public/images/Workshop Session.jpg",
+      url: "/images/Workshop Session.jpg",
       title: "Workshop Session",
       description: "Interactive workshop on emerging technologies"
     },
     {
-      url: "public/images/Panel Discussion.jpg",
+      url: "/images/Panel Discussion.jpg",
       title: "Panel Discussion",
       description: "Expert panel discussing future trends"
     },
     {
-      url: "public/images/Award Ceremony.jpg",
+      url: "/images/Award Ceremony.jpg",
       title: "Award Ceremony",
       description: "Recognition of outstanding research papers"
     },
     {
-      url: "public/images/Networking Session.jpg",
+      url: "/images/Networking Session.jpg",
       title: "Networking Session",
       description: "Participants engaging in discussions"
     }

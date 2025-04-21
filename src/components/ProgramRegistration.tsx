@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CreditCard, Calendar, FileText, Mail, Building, ArrowRight, Copy, Check } from 'lucide-react';
+import { CreditCard, FileText, Mail, Building, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ProgramRegistration = () => {
   const [copied, setCopied] = useState(false);
