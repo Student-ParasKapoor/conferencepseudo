@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center z-20">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">
-            INTERNATIONAL CONFERENCE ON RECENT ADVANCES IN ENGINEERING
+            4th INTERNATIONAL CONFERENCE ON RECENT ADVANCES IN ENGINEERING
             <br />
             <span className="text-4xl md:text-6xl">ICRAE 2025</span>
           </h1>

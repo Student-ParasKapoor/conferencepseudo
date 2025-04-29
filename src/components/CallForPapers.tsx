@@ -170,8 +170,11 @@ const CallForPapers = () => {
             <p className="mb-4">
               Authors submitting paper for conference are required to participate in the contests and pay the registration fees for the contests immediately after submissions. Without payment of registration fees, submission will not be processed.
             </p>
-            <p>
+            <p className="mb-4">
               Publication Fees must be paid only after receiving the acceptance for publication in Journal/book.
+            </p>
+            <p className="mb-4">
+              <strong>Acknowledgment:</strong> The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
             </p>
           </div>
         </div>
