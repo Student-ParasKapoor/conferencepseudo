@@ -40,7 +40,7 @@ const KeynoteSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/dr-naveen-bp-36930610/"
     },
     {
-      name: "Dr. Randip Kumar Das",
+      name: "Prof. Randip Kumar Das",
       title: "Professor, Department of Mechanical Engineering",
       institution: "Indian Institute of Technology (ISM) Dhanbad",
       // expertise: "Cybersecurity and Blockchain",
