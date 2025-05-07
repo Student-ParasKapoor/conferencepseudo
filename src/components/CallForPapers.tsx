@@ -122,7 +122,7 @@ const CallForPapers = () => {
           </h3>
           <div className="flex justify-center">
             <a
-              href="https://easychair.org/conferences/?conf=icrae2025"
+              href="https://cmt3.research.microsoft.com/ICRAE2025/Submission/index"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800 transition-all duration-300 hover-scale hover-glow"
@@ -168,11 +168,11 @@ const CallForPapers = () => {
               Additional Instructions
             </h3>
             <p className="mb-4">
-              Authors submitting paper for conference are required to participate in the contests and pay the registration fees for the contests immediately after submissions. Without payment of registration fees, submission will not be processed.
+            Authors whose papers are accepted must pay the required fees in order for their submissions to be processed.
             </p>
-            <p className="mb-4">
+            {/* <p className="mb-4">
               Publication Fees must be paid only after receiving the acceptance for publication in Journal/book.
-            </p>
+            </p> */}
             <p className="mb-4">
               <strong>Acknowledgment:</strong> The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
             </p>
