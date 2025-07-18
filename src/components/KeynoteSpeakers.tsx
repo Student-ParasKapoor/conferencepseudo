@@ -62,6 +62,14 @@ const KeynoteSpeakers = () => {
       expertise: "Cloud Computing and Distributed Systems",
       image: "/images/Amit.jpg",
       linkedin: "https://www.linkedin.com/in/amit-rai-dixit-a6b408249/"
+    },
+    {
+      name: "Chua Kian Jon Ernest",
+      title: "Associate Professor, Department of Mechanical Engineering",
+      institution: "National University of Singapore, Singapore",
+      expertise: "Sustainable Cooling Technologies; Advanced Moisture Control Processes, Green Thermal Energy Recovery & Integration",
+      image: "/images/Chua.jpg",
+      linkedin: "https://www.linkedin.com/in/kian-jon-ernest-chua-00903624/"
     }
   ];
 

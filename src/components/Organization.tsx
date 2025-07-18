@@ -143,6 +143,21 @@ const AdvisoryCommittee: React.FC = () => {
       photo: "/images/Advisory Comittee/Surya.jpeg"
     },
     {
+      name: "Dr. K. Sudhakar",
+      designation: "Faculty member, Mechanical and Automotive Engineering Technology, Universiti Malaysia Pahang.",
+      photo: "/images/Advisory Comittee/Sudhakar.png"
+    },
+    {
+      name: "Dr. Yash Chawla",
+      designation: "Assistant Professor of Innovation and Marketing Management and Dean’s Representative at the Department of Operations Research and Business Intelligence, Wroclaw University of Science & Technology, Poland. Assistant Editor of Operations Research and Decisions (ISSN 2081-8858; 2391-6060), Founder of SocioWelt, and Founding Chairman of the 1st Virtual Global Chapter – Indian Society of Training and Development.",
+      photo: "/images/Advisory Comittee/Yash.jpg"
+    },
+    {
+      name: "Dr. Abhishek Sharma",
+      designation: "Faculty member, Mechanical Engineering Department, Government Engineering College Palamu, under the Department of Higher and Technical Education, Government of Jharkhand.",
+      photo: "/images/Advisory Comittee/Abhishek.png"
+    },
+    {
       name: "Prof. Swarup K Mahapatra",
       designation: "School of Mechanical Sciences, Indian Institute of Technology Bhubaneswar, Argul, Khordha, Odisha, India",
       photo: "/images/Advisory Comittee/Swarup.jpeg"
@@ -499,12 +514,12 @@ const AdvisoryCommittee: React.FC = () => {
       designation: "MNIT Jaipur, India"
     },
     {
-      name: "Prof. O. P. Yadav",
-      designation: "NCAT, USA"
-    },
-    {
       name: "Prof. Mangey Ram",
       designation: "Graphic Era, Deemed to be University, Dehradun, India"
+    },
+    {
+      name: "Dr. Abhishek Kumar Tripathi",
+      designation: "Department of Mining Engineering, Aditya University, Surampalem, Andhra Pradesh, India",
     }
   ];
 
