@@ -31,6 +31,14 @@ const KeynoteSpeakers = () => {
       // expertise: "Deep Learning and Neural Networks",
       image: "/images/DT.jpg",
       linkedin: "https://www.linkedin.com/in/duc-pham-17613347/?originalSubdomain=uk"
+    },    
+    {
+      name: "Chua Kian Jon Ernest",
+      title: "Associate Professor, Department of Mechanical Engineering",
+      institution: "National University of Singapore, Singapore",
+      expertise: "Sustainable Cooling Technologies; Advanced Moisture Control Processes, Green Thermal Energy Recovery & Integration",
+      image: "/images/Chua.jpg",
+      linkedin: "https://www.linkedin.com/in/kian-jon-ernest-chua-00903624/"
     },
     {
       name: "Dr. Naveen B.P.",
@@ -63,14 +71,6 @@ const KeynoteSpeakers = () => {
       image: "/images/Amit.jpg",
       linkedin: "https://www.linkedin.com/in/amit-rai-dixit-a6b408249/"
     },
-    {
-      name: "Chua Kian Jon Ernest",
-      title: "Associate Professor, Department of Mechanical Engineering",
-      institution: "National University of Singapore, Singapore",
-      expertise: "Sustainable Cooling Technologies; Advanced Moisture Control Processes, Green Thermal Energy Recovery & Integration",
-      image: "/images/Chua.jpg",
-      linkedin: "https://www.linkedin.com/in/kian-jon-ernest-chua-00903624/"
-    }
   ];
 
   return (
