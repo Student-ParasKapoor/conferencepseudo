@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
             <span className="text-4xl md:text-6xl">ICRAE 2025</span>
           </h1>
           <p className="text-xl md:text-3xl mb-6 drop-shadow-md">
-            November 21-22, 2025 | Exploring Innovations for a Sustainable Future
+            February 20-21, 2026 | Exploring Innovations for a Sustainable Future
           </p>
           <div className="flex justify-center space-x-4">
             <a

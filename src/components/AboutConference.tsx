@@ -25,7 +25,7 @@ const AboutConference: React.FC = () => {
             <div className="prose prose-lg mx-auto text-gray-600 text-justify bg-white p-8 rounded-xl shadow-lg">
               <p className="mb-6 leading-relaxed">
                 Fourth International conference on "Recent Advances in Engineering" will be organized by Poornima College
-                of Engineering, Jaipur during November 21-22, 2025. In the previous three editions of conference, the event
+                of Engineering, Jaipur during February 20-21, 2026. In the previous three editions of conference, the event
                 was organized as International Conference and contests.
               </p>
               <p className="mb-6 leading-relaxed">

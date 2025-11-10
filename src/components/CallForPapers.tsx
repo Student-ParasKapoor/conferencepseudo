@@ -147,10 +147,10 @@ const CallForPapers = () => {
               "After submission of paper in CMT, you will receive an ID that will have to be used for all further communications.",
               "All the papers are eligible for the contests. They can participate in the contests. Hence, authors are required to register immediately by paying the registration fees. Without payment of registration fees, submission will not be processed.",
               "Accepted papers for conference and are not participating in the contests will be notified if the paper is accepted for publication. They will have to submit publication charges once it is accepted. Papers for contests are will be notified for further in associated journals.",
-              "All the papers will be processed further. Initial screening will be done by the Technical Program Committee of TECHNOVATION 2024, which includes the scope the conference, plagiarism, organization of the manuscripts, quality of tables / diagrams / figures / illustrations/ equations and etc. Authors will be required to submit camera-ready paper, copy right form before presentation",
+              "All the papers will be processed further. Initial screening will be done by the Technical Program Committee of Conference, which includes the scope the conference, plagiarism, organization of the manuscripts, quality of tables / diagrams / figures / illustrations/ equations and etc. Authors will be required to submit camera-ready paper, copy right form before presentation",
               "Paper accepted for journals shall be required to pay additional publication charges as well as will be required to submit the final manuscript as per journal requirements.",
               "Schedule of presentation of papers in conference and the contests shall be communicated in advance.",
-              "All the papers will be published in the TECHNOVATION- 2024 proceedings except those accepted for journal publication.",
+              "All the papers will be published in the Conference proceedings except those accepted for journal publication.",
               "Certificate of Participation will be issued to all the participants who register and present the paper."
             ].map((text, index) => (
               <li key={index} className="flex items-start hover-lift animate-fadeIn" style={{ animationDelay: `${index * 100}ms` }}>

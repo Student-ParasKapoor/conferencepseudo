@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
     {
       question: 'What are the important dates?',
       answer:
-        'Paper submission deadline is October 15, 2025.',
+        'Paper submission deadline is December 31, 2025.',
     },
     {
       question: 'Is virtual presentation allowed?',

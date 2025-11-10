@@ -120,10 +120,10 @@ const ProgramRegistration = () => {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
                     <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider" colSpan={2}>
-                      Early Registration<br/>(Before 30 August, 2025)
+                      Early Registration<br/>(Before 31 December, 2025)
                     </th>
                     <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider" colSpan={2}>
-                      Late Registration<br/>(After 30 August, 2025)
+                      Late Registration<br/>(After 31 December, 2025)
                     </th>
                   </tr>
                   <tr>
