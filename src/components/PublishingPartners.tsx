@@ -3,12 +3,14 @@ import { BookOpen, Award, CheckCircle, BookMarked, FileText, Globe } from 'lucid
 
 const PublishingPartners = () => {
   const publisher = {
-    name: "STM",
-    description: "Leading publisher in scientific, technical, and medical research",
-    logo: "/images/stm logo.png",
+    name: "AIP Publishing",
+    description: "A wholly owned not-for-profit subsidiary of the American Institute of Physics (AIP), AIP Publishing’s mission is to advance, promote, and serve the physical sciences for the benefit of humanity by breaking barriers to open, equitable research communication and empowering researchers to accelerate global progress.",
+    logo: "images/aip logo.png",
     journals: [
-      "Journal of Polymer and Composites"
-      // "Scientific Reports"
+      // "Journal of Polymer and Composites",
+      "Applied Physics Letters",
+      "Journal of Applied Physics",
+      "The Journal of Chemical Physics"
     ]
   };
 
@@ -64,7 +66,7 @@ const PublishingPartners = () => {
                 <img 
                   src={publisher.logo} 
                   alt={`${publisher.name} Logo`} 
-                  className="h-24 w-24 object-contain transform transition-transform duration-300 hover:scale-110 animate-fadeIn"
+                  className="h-30 w-30 object-contain transform transition-transform duration-300 hover:scale-110 animate-fadeIn"
                 />
               </div>
             </div>
