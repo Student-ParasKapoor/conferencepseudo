@@ -2,17 +2,28 @@ import React from 'react';
 import { BookOpen, Award, CheckCircle, BookMarked, FileText, Globe } from 'lucide-react';
 
 const PublishingPartners = () => {
-  const publisher = {
-    name: "AIP Publishing",
-    description: "A wholly owned not-for-profit subsidiary of the American Institute of Physics (AIP), AIP Publishing’s mission is to advance, promote, and serve the physical sciences for the benefit of humanity by breaking barriers to open, equitable research communication and empowering researchers to accelerate global progress.",
-    logo: "images/aip logo.png",
-    journals: [
-      // "Journal of Polymer and Composites",
-      "Applied Physics Letters",
-      "Journal of Applied Physics",
-      "The Journal of Chemical Physics"
-    ]
-  };
+
+  const publishers = [
+    {
+      name: "AIP Publishing",
+      description: "A wholly owned not-for-profit subsidiary of the American Institute of Physics (AIP), AIP Publishing's mission is to advance, promote, and serve the physical sciences for the benefit of humanity by breaking barriers to open, equitable research communication and empowering researchers to accelerate global progress.",
+      logo: "images/aip logo.png",
+      journals: [
+        // "Journal of Polymer and Composites",
+        "Applied Physics Letters",
+        "Journal of Applied Physics",
+        "The Journal of Chemical Physics"
+      ]
+    },
+    {
+      name: "STM",
+      description: "Leading publisher in scientific, technical, and medical research",
+      logo: "/images/stm logo.png",
+      journals: [
+        "Journal of Polymer and Composites"
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 relative overflow-hidden">
@@ -26,15 +37,17 @@ const PublishingPartners = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12 animate-fadeIn">
           <h2 className="text-3xl font-extrabold text-blue-900 mb-4 transform hover:scale-105 transition-transform duration-300">
-            Publishing Partner
+            Publishing Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Working with leading publisher to ensure high-quality publication of your research
+            Working with leading publishers to ensure high-quality publication of your research
           </p>
         </div>
 
-        <div className="grid md:grid-cols-1 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {publishers.map((publisher) => (
           <div 
+            key={publisher.name}
             className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300 animate-fadeIn"
           >
             <div className="flex justify-between items-start">
@@ -63,14 +76,17 @@ const PublishingPartners = () => {
                 </div>
               </div>
               <div className="ml-8 flex-shrink-0">
-                <img 
-                  src={publisher.logo} 
-                  alt={`${publisher.name} Logo`} 
-                  className="h-30 w-30 object-contain transform transition-transform duration-300 hover:scale-110 animate-fadeIn"
-                />
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl flex items-center justify-center shadow-sm border border-gray-200">
+                  <img 
+                    src={publisher.logo} 
+                    alt={`${publisher.name} Logo`} 
+                    className="h-32 w-32 object-contain transform transition-all duration-300 hover:scale-110 animate-fadeIn"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          ))}
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
