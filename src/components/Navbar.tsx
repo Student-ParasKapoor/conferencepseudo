@@ -80,11 +80,20 @@ const Navbar: React.FC = () => {
               className="h-14 w-auto"
               onError={() => console.error('Failed to load NAAC logo')}
             />
+            <div className="hidden md:block h-12 w-px bg-gray-300" />
+            <img
+              src="/images/DST image.jpeg"
+              alt="DST image"
+              className="h-14 w-auto object-contain"
+              onError={() => console.error('Failed to load DST Rajasthan logo')}
+            />
           </div>
-          <div className="mt-4 md:mt-0 text-center md:text-right">
-            <h1 className="text-xl font-bold text-[#1a2a5e]">International Conference 2025</h1>
-            <p className="text-sm text-gray-600">Advancing Innovations in Engineering & Technology</p>
-          </div>
+          <img
+            src="/images/Conference Logo.jpeg"
+            alt="Conference Logo"
+            className="h-20 w-20 object-contain mt-4 md:mt-0"
+            onError={() => console.error('Failed to load conference logo')}
+          />
         </div>
       </div>
       <nav className="bg-[#1a2a5e] text-white shadow-lg">

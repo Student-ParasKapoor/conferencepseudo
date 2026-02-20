@@ -24,6 +24,9 @@ const HomePage: React.FC = () => {
             <br />
             <span className="text-4xl md:text-6xl">ICRAE 2025</span>
           </h1>
+          <p className="text-lg md:text-2xl mb-6 drop-shadow-md font-semibold text-yellow-300">
+            (Sponsored By DST, Rajasthan)
+          </p>
           <p className="text-xl md:text-3xl mb-6 drop-shadow-md">
             February 20-21, 2026 | Exploring Innovations for a Sustainable Future
           </p>
